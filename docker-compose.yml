@@ -16,6 +16,9 @@ services:
       - host_ssh_key
     networks:
       - servers
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
   mysql:
     image: mysql:8.0
     environment:
