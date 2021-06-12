@@ -8,6 +8,7 @@ services:
       - mysql
     volumes:
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - /etc/localtime:/etc/localtime:ro
       - ./:/app
     ports:
       - '${APP_PORT:-80}:80'
