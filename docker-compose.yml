@@ -31,6 +31,8 @@ services:
       - servers
     ports:
       - '${FORWARD_DB_PORT:-3306}:3306'
+    volumes:
+      - db-mysql:/var/lib/mysql
 
   redis:
     image: 'redis:alpine'
