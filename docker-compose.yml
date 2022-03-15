@@ -17,7 +17,7 @@ services:
     networks:
       - servers
     extra_hosts:
-      - host.docker.internal:host-gateway
+      - host.docker.internal:${HOST_GATEWAY:-host-gateway}
 
   mysql:
     image: mysql:8.0
